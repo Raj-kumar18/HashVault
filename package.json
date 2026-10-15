@@ -1,0 +1,39 @@
+{
+  "name": "hashvault",
+  "version": "1.0.0",
+  "description": "HashVault - Tamper-Evident Logging & AI Security Intelligence Platform",
+  "private": true,
+  "scripts": {
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "node:blockchain": "npm --prefix blockchain run node",
+    "deploy:blockchain": "npm --prefix blockchain run deploy:local",
+    "start:backend": "npm --prefix backend start",
+    "start:collector": "npm --prefix collector start",
+    "build:frontend": "npm --prefix frontend run build",
+    "preview:frontend": "npm --prefix frontend run preview",
+    "test": "npm --prefix backend test",
+    "test:backend": "npm --prefix backend test",
+    "test:collector": "npm --prefix collector test",
+    "test:blockchain": "npm --prefix blockchain test",
+    "test:security": "npm --prefix backend run test:security",
+    "test:all": "npm --prefix backend test && npm --prefix collector test && npm --prefix blockchain test",
+    "seed:admin": "npm --prefix backend run seed:admin",
+    "seed:demo": "npm --prefix backend run seed:demo",
+    "reset:demo": "npm --prefix backend run reset:demo",
+    "verify:demo": "npm --prefix backend run verify:demo",
+    "install:all": "npm install && npm --prefix backend install && npm --prefix frontend install && npm --prefix blockchain install"
+  },
+  "keywords": [
+    "cybersecurity",
+    "tamper-evident",
+    "logging",
+    "hash-chains",
+    "blockchain",
+    "ai-security",
+    "authentication",
+    "rbac"
+  ],
+  "author": "",
+  "license": "ISC"
+}

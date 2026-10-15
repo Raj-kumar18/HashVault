@@ -1,0 +1,66 @@
+# Dependencies
+node_modules/
+*/node_modules/
+/.pnp
+.pnp.js
+
+# Environment variables & secrets (CRITICAL: Never commit secrets)
+.env
+.env.*
+*.env
+*.env.*
+!.env.example
+!**/.env.example
+
+# Cryptographic keys, certificates, & keystores
+*.pem
+*.key
+*.cert
+*.crt
+id_rsa*
+*.keystore
+
+# Production build outputs & caches
+dist/
+dist-ssr/
+build/
+.vite/
+*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor & OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Blockchain compiler cache & artifacts
+blockchain/artifacts/
+blockchain/cache/
+blockchain/typechain/
+blockchain/typechain-types/
+
+# Collector local state store & scratch files
+collector/.state/
+.state/
+scratch/
+coverage/
+.nyc_output/

@@ -1,0 +1,28 @@
+{
+  "name": "logsentinel-collector",
+  "version": "1.0.0",
+  "description": "LogSentinel Linux Background Log Collector Agent (Phase 3)",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "logsentinel-collector": "./src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test tests/*.test.js"
+  },
+  "keywords": [
+    "logsentinel",
+    "collector",
+    "agent",
+    "telemetry",
+    "linux",
+    "logging",
+    "security"
+  ],
+  "author": "LogSentinel Engineering",
+  "license": "ISC",
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

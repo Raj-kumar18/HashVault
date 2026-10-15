@@ -1,0 +1,25 @@
+{
+  "backendUrl": "http://localhost:5001/api",
+  "serverId": "srv_YOUR_REGISTERED_SERVER_ID",
+  "enrollmentToken": "ent_YOUR_SINGLE_USE_ENROLLMENT_TOKEN",
+  "sources": [
+    {
+      "path": "/var/log/auth.log",
+      "pollIntervalMs": 1000
+    },
+    {
+      "path": "/var/log/syslog",
+      "pollIntervalMs": 1000
+    }
+  ],
+  "batchSize": 50,
+  "flushIntervalMs": 2000,
+  "heartbeatIntervalMs": 30000,
+  "maxRetries": 5,
+  "retryBaseDelayMs": 1000,
+  "retryMaxDelayMs": 30000,
+  "stateDir": "/var/lib/logsentinel",
+  "maxQueueBytes": 52428800,
+  "overflowPolicy": "drop-oldest",
+  "logLevel": "info"
+}

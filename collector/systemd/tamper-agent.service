@@ -1,0 +1,46 @@
+[Unit]
+Description=LogSentinel Tamper-Evident Background Log Collector Agent
+Documentation=https://github.com/logsentinel/logsentinel
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=logsentinel
+Group=logsentinel
+
+# Working and State directories
+WorkingDirectory=/var/lib/logsentinel
+StateDirectory=logsentinel
+ConfigurationDirectory=logsentinel
+
+# Execution Command
+ExecStart=/usr/bin/node /opt/logsentinel-collector/src/index.js --config /etc/logsentinel/collector.json
+
+# Environment overrides if configured
+EnvironmentFile=-/etc/logsentinel/collector.env
+
+# Restart policy with sensible throttling
+Restart=always
+RestartSec=5s
+StartLimitIntervalSec=60s
+StartLimitBurst=5
+
+# Practical Security Hardening
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictRealtime=true
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+
+# Standard output and logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=logsentinel-collector
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,47 @@
+{
+  "name": "hashvault-backend",
+  "version": "0.4.0",
+  "description": "HashVault backend API service - Phase 4 Tamper-Evident SHA-256 Log Integrity Engine",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "node --test --test-concurrency=1 tests/auth.test.js tests/server.test.js tests/collectorIngestion.test.js tests/collectorE2E.test.js tests/integrity.test.js tests/checkpoint.test.js tests/monitoring.test.js tests/dashboard.test.js tests/sentinelAi.test.js tests/securityRegression.test.js",
+    "test:auth": "node --test tests/auth.test.js",
+    "test:server": "node --test tests/server.test.js",
+    "test:ingestion": "node --test tests/collectorIngestion.test.js",
+    "test:e2e": "node --test tests/collectorE2E.test.js",
+    "test:integrity": "node --test tests/integrity.test.js",
+    "test:checkpoint": "node --test tests/checkpoint.test.js",
+    "test:monitoring": "node --test tests/monitoring.test.js",
+    "test:dashboard": "node --test tests/dashboard.test.js",
+    "test:ai": "node --test tests/sentinelAi.test.js",
+    "test:security": "node --test tests/securityRegression.test.js",
+    "seed:admin": "node src/scripts/seedAdmin.js",
+    "seed:demo": "node src/scripts/seedDemo.js",
+    "reset:demo": "node src/scripts/resetDemo.js",
+    "verify:demo": "node src/scripts/runDemoVerification.js"
+  },
+  "dependencies": {
+    "@langchain/core": "^1.2.17",
+    "@langchain/google-genai": "^2.3.2",
+    "@langchain/langgraph": "^1.4.21",
+    "@langchain/openai": "^1.6.2",
+    "bcryptjs": "^3.0.3",
+    "connect-mongo": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "ethers": "^6.17.0",
+    "express": "^5.0.0",
+    "express-rate-limit": "^8.7.1",
+    "express-session": "^1.19.0",
+    "mongoose": "^8.9.5",
+    "zod": "^4.6.6"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^11.3.0",
+    "nodemon": "^3.1.9"
+  }
+}
