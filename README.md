@@ -1,4 +1,4 @@
-# HashVault — Cryptographic Audit Logging & Autonomous SOC Platform
+# HashVault — Cryptographic Audit Logging & Autonomous SOC Platforms
 
 > **Tagline:** Every Log. Verifiable Trust.  
 > **Autonomous Copilot:** VaultAI  
